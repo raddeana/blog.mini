@@ -1,0 +1,13 @@
+<view class="project-wrapper">
+	<text class="title">{{ data.title }}</text>
+	<view class="item-wrapper">
+		<view class="item" wx:for="{{ data.items }}" wx:key="index">
+			<checkbox 
+				value="{{item.name}}"
+				checked="{{item.state === 'done'}}"
+				disabled="{{item.state === 'waiting'}}"
+			/>
+			<span>{{item.title}}</span>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,22 @@
+.project-wrapper {
+	margin: 20rpx 30rpx 0;
+	padding: 20rpx 0 20rpx 60rpx;
+	background-color: #CCCCCC;
+	border-radius: 10rpx;
+}
+
+.project-wrapper .title {
+	font-size: 42rpx;	
+}
+
+.project-wrapper .item {
+	margin: 20rpx 0 0 0;
+}
+
+.project-wrapper .item span {
+	margin: 0 0 0 20rpx;
+}
+
+.project-wrapper .item:first-child {
+	margin: 30rpx 0 0 0;
+}

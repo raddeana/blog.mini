@@ -1,0 +1,60 @@
+.swiper-item {
+    width: 100%;
+    height: 150px;
+    background: #003366;
+}
+
+.swiper-item image {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-item video {
+    width: 100%;
+    height: 100%;
+}
+
+.portals-wrapper {
+    display: flex;
+    padding: 0 22rpx;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.portals-item {
+    margin: 20rpx 0 0 0;
+    padding: 0 0 16rpx 0 ;
+    width: 345rpx;
+    text-align: center;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.portals-item image {
+    width: 100%;
+    height: 160rpx;
+}
+
+.portals-item text {
+    margin: 10rpx;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.portals-item__contents {
+	background: #0066CC;
+}
+
+.portals-item__hackbox {
+	background: #009966;
+}
+
+.portals-item__gamecenter {
+	background: #006633;
+}
+
+.portals-item__webgl {
+	background: #003366;
+}

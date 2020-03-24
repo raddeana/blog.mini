@@ -1,0 +1,14 @@
+.content-wrapper {
+	margin: 20rpx 30rpx 0;
+	padding: 20rpx 0 20rpx 20rpx;
+	background-color: #CCCCCC;
+	border-radius: 10rpx;
+}
+
+.content-wrapper .title {
+	font-size: 42rpx;
+}
+
+.content-wrapper .content {
+	margin: 30rpx 0 0 0;
+}

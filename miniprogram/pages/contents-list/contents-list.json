@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "内容列表",
+    "usingComponents": {
+        "list": "/components/list/list",
+        "loading": "/miniprogram_npm/weui-miniprogram/loading/loading"
+    },
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 120
+}

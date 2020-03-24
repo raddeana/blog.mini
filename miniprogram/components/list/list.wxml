@@ -1,0 +1,7 @@
+<view class="list-wrapper">
+	<view class="list-item-wrapper" wx:for="{{data}}" wx:key="index">
+		<project data="{{item}}" wx:if="{{item.type === 'project'}}"/>
+		<content data="{{item}}" wx:elif="{{item.type === 'content'}}"/>
+		<schedule data="{{item}}" wx:elif="{{item.type === 'schedule'}}"/>
+	</view>
+</view>

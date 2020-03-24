@@ -1,0 +1,6 @@
+<view class="content-wrapper">
+	<text class="title">{{ data.title }}</text>
+	<view class="content">
+		{{ data.content }}
+	</view>
+</view>

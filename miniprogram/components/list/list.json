@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "project": "/components/project/project",
+        "content": "/components/content/content",
+        "schedule": "/components/schedule/schedule"
+    }
+}

@@ -1,0 +1,23 @@
+.schedule-wrapper {
+	margin: 20rpx 30rpx 0;
+	padding: 20rpx 0 20rpx 60rpx;
+	background-color: #CCCCCC;
+	border-radius: 10rpx;
+}
+
+.schedule-wrapper .title {
+	font-size: 42rpx;
+}
+
+.schedule-wrapper .items-wrapper {
+	margin: 30rpx 0 0 0;
+}
+
+.schedule-wrapper .items-wrapper .item {
+	margin: 20rpx 0 0 0;
+}
+
+.schedule-wrapper .items-wrapper .item span {
+	margin: 0 0 0 20rpx;
+	vertical-align: 10rpx;
+}

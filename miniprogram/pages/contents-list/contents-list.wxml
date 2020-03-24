@@ -1,0 +1,4 @@
+<view class="contents-list">
+	<list data="{{list}}" />
+	<loading type="circle" />
+</view>

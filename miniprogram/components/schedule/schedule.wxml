@@ -1,0 +1,9 @@
+<view class="schedule-wrapper">
+	<text class="title">{{ data.title }}</text>
+	<view class="items-wrapper">
+		<view class="item" wx:for="{{ data.nodes }}" wx:key="index">
+			<icon type="{{item.state}}" size="20"/>
+			<span>{{ item.title }}</span>
+		</view>
+	</view>
+</view>
