@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/home/home",
+    "pages/user/user",
     "pages/contents-list/contents-list"
   ],
   "window": {
@@ -8,6 +10,19 @@
     "navigationBarTitleText": "博客Raddeana",
     "navigationBarBackgroundColor": "#0099CC",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "iconPath": "images/home.jpg",
+      "selectedIconPath": "images/home.jpg",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/user/user",
+      "iconPath": "images/user.jpg",
+      "selectedIconPath": "images/user.jpg",
+      "text": "我的"
+    }]
   },
   "resizable": true,
   "pageOrientation": "auto",

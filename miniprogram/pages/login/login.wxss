@@ -1,0 +1,21 @@
+.login-panel {
+    width: 560rpx;
+    display: block;
+    margin: 120rpx auto 0;
+    border: 1px solid #eee;
+    padding: 30rpx;
+}
+
+.login-panel .van-panel:after {
+    border: none;
+}
+
+.field-cells {
+    border-bottom: 0;
+}
+
+.login-button .van-button {
+    margin: 60rpx auto 0;
+    display: flex;
+    font-size: 28rpx;
+}

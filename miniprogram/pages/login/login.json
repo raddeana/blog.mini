@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "登录",
+    "usingComponents": {
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-button":"@vant/weapp/button/index",
+        "van-panel": "@vant/weapp/panel/index",
+        "van-field": "@vant/weapp/field/index"
+    }
+}

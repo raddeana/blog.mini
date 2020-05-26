@@ -1,8 +1,9 @@
 .project-wrapper {
 	margin: 20rpx 30rpx 0;
 	padding: 20rpx 0 20rpx 60rpx;
-	background-color: #CCCCCC;
+	background-color: #0099FF;
 	border-radius: 10rpx;
+    color: #efefef;
 }
 
 .project-wrapper .title {
