@@ -1,8 +1,10 @@
 /**
- * 首页
+ * 登录页
  * @author Philip
- */ 
-Page({
+ */
+import pageWrapper from '../../utils/pageWrapper'
+
+Page(pageWrapper({
     data: {
         password: '',
         username: ''
@@ -12,6 +14,6 @@ Page({
      * @EventHandler
      */
     handleSubmit () {
-
+        
     }
-})
+}))

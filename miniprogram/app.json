@@ -1,14 +1,15 @@
 {
   "pages": [
-    "pages/login/login",
-    "pages/home/home",
     "pages/user/user",
-    "pages/contents-list/contents-list"
+    "pages/authorize-loading/authorize-loading",
+    "pages/home/home",
+    "pages/contents-list/contents-list",
+    "pages/login/login"
   ],
   "window": {
-    "backgroundColor": "#00ccff",
+    "backgroundColor": "#bf778a",
     "navigationBarTitleText": "博客Raddeana",
-    "navigationBarBackgroundColor": "#0099CC",
+    "navigationBarBackgroundColor": "#a04056",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {

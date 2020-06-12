@@ -1,0 +1,13 @@
+page {
+    background-color: #efefef;
+}
+
+.contacts {
+    margin: 40rpx 0 0 0;
+}
+
+.logout-button .van-button {
+    margin: 40px auto 0;
+    display: flex;
+    font-size: 32rpx;
+}
