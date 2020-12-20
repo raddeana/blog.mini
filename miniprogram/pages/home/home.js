@@ -2,9 +2,7 @@
  * 首页
  * @author Philip
  */
-import pageWrapper from '../../utils/pageWrapper'
-
-Page(pageWrapper({
+Page({
 	data: {
 	    swiperItems: [{
 	    	src: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584363631752&di=bcf276a87fc71775ce8063735cb93d96&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Fgamezone%2Fpics%2Fhv1%2F210%2F2%2F1628%2F105861420.jpg',
@@ -20,4 +18,4 @@ Page(pageWrapper({
 	    vertical: false,
 	    autoplay: false
 	}
-}))
+})

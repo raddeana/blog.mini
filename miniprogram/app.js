@@ -2,4 +2,10 @@
  * 微信小程序 App
  * @author Philip
  */
-App({})
+import { checkSession } from './utils/authorize'
+
+App({
+    onLoad () {
+        checkSession()
+    }
+})

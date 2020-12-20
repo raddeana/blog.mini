@@ -2,9 +2,7 @@
  * 登录页
  * @author Philip
  */
-import pageWrapper from '../../utils/pageWrapper'
-
-Page(pageWrapper({
+Page({
     data: {
         password: '',
         username: ''
@@ -16,4 +14,4 @@ Page(pageWrapper({
     handleSubmit () {
         
     }
-}))
+})

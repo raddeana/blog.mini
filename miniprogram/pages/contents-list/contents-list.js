@@ -2,8 +2,6 @@
  * 内容列表
  * @author Philip
  */
-import pageWrapper from '../../utils/pageWrapper'
-
 function createData () {
 	const arr = []
 
@@ -58,7 +56,7 @@ function createData () {
 	return arr
 }
 
-Page(pageWrapper({
+Page({
 	data: {
 		list: createData()
 	},
@@ -71,4 +69,4 @@ Page(pageWrapper({
 			list: data.concat(currData)
 		})
 	}
-}))
+})

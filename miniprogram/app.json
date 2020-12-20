@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/user/user",
     "pages/authorize-loading/authorize-loading",
     "pages/home/home",
+    "pages/user/user",
     "pages/contents-list/contents-list",
     "pages/login/login"
   ],
@@ -26,7 +26,5 @@
     }]
   },
   "resizable": true,
-  "pageOrientation": "auto",
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "pageOrientation": "auto"
 }

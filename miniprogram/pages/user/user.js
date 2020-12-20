@@ -2,9 +2,7 @@
  * 用户页
  * @author Philip
  */
-import pageWrapper from '../../utils/pageWrapper'
-
-Page(pageWrapper({
+Page({
     /**
      * 登出
      * @EventHandler
@@ -12,4 +10,4 @@ Page(pageWrapper({
     handleLogout () {
 
     }
-}))
+})
