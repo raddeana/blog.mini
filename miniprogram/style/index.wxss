@@ -1,0 +1,8 @@
+@import './checkbox.wxss';
+
+.view {
+    position: absolute;
+    top: 0;
+    bottom: 96rpx;
+    display: block;
+}

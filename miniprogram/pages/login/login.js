@@ -9,9 +9,9 @@ Page({
     },
     /**
      * 提交
-     * @EventHandler
+     * @return {void}
      */
-    handleSubmit () {
+    onSubmit () {
         
     }
 })

@@ -1,5 +1,5 @@
 <view class="logo-wrapper">
-    <image 
+    <image
         class="logo-image"
         mode="heightFix"
         src="https://raddeana-materials.oss-cn-hangzhou.aliyuncs.com/images/logo.png"

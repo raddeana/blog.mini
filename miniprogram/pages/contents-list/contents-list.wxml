@@ -1,4 +1,40 @@
-<view class="contents-list">
-	<list data="{{list}}" />
-	<loading type="circle" />
-</view>
+<page-meta
+  background-text-style="{{navigationBarOptions.bgTextStyle}}"
+  background-color="{{navigationBarOptions.bgColor}}"
+  background-color-top="{{navigationBarOptions.bgColorTop}}"
+  background-color-bottom="{{navigationBarOptions.bgColorBottom}}"
+  scroll-top="{{navigationBarOptions.scrollTop}}"
+  root-font-size="{{navigationBarOptions.rootFontSize}}"
+>
+  <navigation-bar
+    title="{{ navigationBarOptions.pageTitle }}"
+    front-color="#fff"
+    background-color="#155c90"
+  />
+</page-meta>
+<recycle-view
+    enable-back-to-top="true"
+    scroll-with-animation="true"
+    bounces="false"
+    lower-threshold="120"
+    bindscrolltolower="onLoadData"
+    batch="{{batchSetRecycleData}}"
+    id="recycle-id"
+>
+    <recycle-item wx:for="{{recycleList}}" wx:key="item.id">
+      <content data="{{item}}" wx:if="{{item.type == 'content'}}" />
+      <project data="{{item}}" wx:elif="{{item.type == 'project'}}" />
+      <schedule data="{{item}}" wx:elif="{{item.type == 'schedule'}}" />
+    </recycle-item>
+    <view class="infinite-scroll-bottom" slot="after">
+        <van-loading
+            wx:if="{{!finished}}"
+            slot="after"
+            custom-class="infinite-scroll-loading"
+            type="spinner"
+            color="#1989fa"
+            size="22px"
+        />
+        <view class="no-more" wx:if="{{finished}}">没有更多了 ~</view>
+    </view>
+</recycle-view>

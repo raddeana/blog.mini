@@ -10,7 +10,27 @@
 
 .logo-wrapper .logo-image {
     margin: -60px 0 0 0;
-    width: 144px;
-    height: 144px;
+    width: 73.5px;
+    height: 73.5px;
     display: block;
+    animation: loading 3s ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    25%{
+        transform: rotateY(90deg) rotateX(90deg);
+    }
+    50%{
+        transform: rotateY(180deg) rotateX(180deg);
+    }
+    75%{
+        transform: rotateY(270deg) rotateX(270deg);
+    }
+    100%{
+        transform: rotateY(360deg) rotateX(360deg);
+    }
 }

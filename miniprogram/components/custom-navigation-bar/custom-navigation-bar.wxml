@@ -1,0 +1,14 @@
+<page-meta
+  background-text-style="{{options.bgTextStyle}}"
+  background-color="{{options.bgColor}}"
+  background-color-top="{{options.bgColorTop}}"
+  background-color-bottom="{{options.bgColorBottom}}"
+  scroll-top="{{options.scrollTop}}"
+  root-font-size="{{options.rootFontSize}}"
+>
+  <navigation-bar
+    title="{{ options.pageTitle }}"
+    front-color="#fff"
+    background-color="#155c90"
+  />
+</page-meta>

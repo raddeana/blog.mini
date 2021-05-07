@@ -2,20 +2,48 @@
  * 首页
  * @author Philip
  */
+import { aliOssBath } from '../../constants/config';
+
 Page({
-	data: {
-	    swiperItems: [{
-	    	src: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584363631752&di=bcf276a87fc71775ce8063735cb93d96&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Fgamezone%2Fpics%2Fhv1%2F210%2F2%2F1628%2F105861420.jpg',
-	    	type: 'img'
-	    }, {
-	    	src: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584363631612&di=c1d4b83e6bdc91ba77a9699b9de41bea&imgtype=0&src=http%3A%2F%2Fp1.ifengimg.com%2Fa%2F2016_46%2Fdf1bf6b564ddddb_size383_w500_h410.png',
-	    	type: 'img'
-	    }, {
-	    	src: 'https://www.w3school.com.cn/example/html5/mov_bbb.mp4',
-	    	type: 'vedio'
-	    }],
-	    indicatorDots: true,
-	    vertical: false,
-	    autoplay: false
-	}
+    data: {
+        swiperItems: [{
+        	src: `${aliOssBath}/images/illustration/illustration-dandelion.jpg`,
+        	type: 'img'
+        }, {
+        	src: `${aliOssBath}/images/illustration/illustration-hack.jpg`,
+        	type: 'img'
+        }, {
+        	src: `${aliOssBath}/vedios/mov_bbb.mp4`,
+        	type: 'vedio'
+        }],
+        portals: [{
+            pic: `${aliOssBath}/images/illustration/illustration-dandelion.jpg`,
+            title: '内容中心',
+            backgroundColor: '#b9c561',
+            path: '/pages/contents-list/contents-list'
+        }, {
+            pic: `${aliOssBath}/images/illustration/illustration-hack.jpg`,
+            title: 'Hack 盒子',
+            backgroundColor: '#333333',
+            path: '/pages/hack-box/hack-box'
+        }, {
+            pic: `${aliOssBath}/images/illustration/illustration-3d.jpg`,
+            title: 'Webgl',
+            backgroundColor: '#005e77',
+            path: '/pages/webgl/webgl'
+        }, {
+            pic: `${aliOssBath}/images/illustration/illustration-map.jpg`,
+            title: '地图',
+            backgroundColor: '#32353e',
+            path: '/map/pages/index/index'
+        }, {
+            pic: `${aliOssBath}/images/illustration/illustration-music.jpg`,
+            title: '音乐',
+            backgroundColor: '#009688',
+            path: '/pages/musics/musics'
+        }],
+        indicatorDots: true,
+        vertical: false,
+        autoplay: false
+    }
 })

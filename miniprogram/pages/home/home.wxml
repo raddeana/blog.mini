@@ -1,4 +1,7 @@
-<view>
+<scroll-view
+	scroll-y="true"
+	class="view"
+>
 	<swiper
 		indicator-dots="{{indicatorDots}}" 
 		autoplay="{{autoplay}}" 
@@ -8,9 +11,13 @@
 		<block wx:for="{{swiperItems}}" wx:key="index">
 			<swiper-item>
 				<view class="swiper-item">
-					<image wx:if="{{item.type === 'img'}}" mode="aspectFit" src="{{ item.src }}" ></image>
+					<image
+						wx:if="{{item.type === 'img'}}"
+						mode="scaleToFill"
+						src="{{ item.src }}"
+					></image>
 					<video
-						wx:if="{{item.type === 'vedio'}}"
+						wx:if="{{ item.type === 'vedio' }}"
 						src="{{ item.src }}"
 						controls
 					></video>
@@ -19,29 +26,14 @@
 		</block>
 	</swiper>
 	<view class="portals-wrapper">
-		<navigator url="/pages/contents-list/contents-list">
-			<view class="portals-item portals-item__contents">
-				<image mode="scaleToFill" src="https://raddeana-materials.oss-cn-hangzhou.aliyuncs.com/images/cloud.png"></image>
-				<text>内容中心</text>
-			</view>
-		</navigator>
-		<navigator url="/pages/hack-box/hack-box">
-			<view class="portals-item portals-item__hackbox">
-				<image mode="scaleToFill" src="https://raddeana-materials.oss-cn-hangzhou.aliyuncs.com/images/logo.png"></image>
-				<text>Hack 盒子</text>
-			</view>
-		</navigator>
-		<navigator url="/pages/game-center/game-center">
-			<view class="portals-item portals-item__gamecenter">
-				<image mode="scaleToFill" src="https://raddeana-materials.oss-cn-hangzhou.aliyuncs.com/images/skies.jpg"></image>
-				<text>游戏中心</text>
-			</view>
-		</navigator>
-		<navigator url="/pages/webgl/webgl">
-			<view class="portals-item portals-item__webgl">
-				<image mode="scaleToFill" src="https://raddeana-materials.oss-cn-hangzhou.aliyuncs.com/images/background-starry.gif"></image>
-				<text>Webgl</text>
+		<navigator wx:for="{{portals}}" url="{{item.path}}">
+			<view class="portals-item" style="background-color: {{ item.backgroundColor }};">
+				<image
+					mode="scaleToFill"
+					src="{{ item.pic }}"
+				/>
+				<text>{{ item.title }}</text>
 			</view>
 		</navigator>
 	</view>
-</view>
+</scroll-view>

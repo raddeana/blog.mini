@@ -1,0 +1,1 @@
+export const aliOssBath = 'https://raddeana-materials.oss-cn-hangzhou.aliyuncs.com';

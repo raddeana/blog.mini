@@ -1,19 +1,17 @@
 <van-panel title="登录" border="{{ false }}" class="login-panel">
     <van-cell-group border="{{ false }}" class="field-cells">
         <van-field
-            value="{{ username }}"
+            model:value="{{ username }}"
             placeholder="请输入用户名"
-            bind:change="handleUsername"
         />
         <van-field
-            value="{{ password }}"
+            model:value="{{ password }}"
             placeholder="请输入密码"
-            bind:change="handlePassword"
         />
     </van-cell-group>
     <van-button 
         class="login-button"
         type="primary"
-        bind:change="handleSubmit"
+        bind:change="onSubmit"
     >登录</van-button>
 </van-panel>

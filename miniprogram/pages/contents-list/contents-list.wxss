@@ -1,0 +1,32 @@
+.infinite-scroll-bottom {
+    margin: 20rpx auto 20rpx;
+    text-align: center;
+}
+
+.infinite-scroll-bottom .no-more {
+    margin: 20rpx auto 20rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: gray;
+}
+
+.content-wrapper {
+	margin: 20rpx 20rpx 0;
+	padding: 20rpx 0 20rpx 20rpx;
+    width: 710rpx;
+    height: 320rpx;
+	background-color: #333399;
+	border-radius: 10rpx;
+    color: #efefef;
+    width: 710rpx;
+    box-sizing: border-box;
+}
+
+.content-wrapper .title {
+	font-size: 42rpx;
+}
+
+.content-wrapper .content {
+	margin: 30rpx 0 0 0;
+    word-wrap: break-word;
+}

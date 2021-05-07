@@ -1,0 +1,58 @@
+checkbox .wx-checkbox-input {
+  border-radius: 32rpx;
+  width: 32rpx;
+  height: 32rpx;
+  border: 2px solid #50ab38;
+}
+
+checkbox .wx-checkbox-input-disabled {
+  border-radius: 32rpx;
+  width: 32rpx;
+  height: 32rpx;
+  background: #f3f3f3;
+  border: 1px solid rgba(201, 201, 201, 1);
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #50ab38;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+radio .wx-radio-input{ 
+  height: 30rpx; 
+  width: 30rpx;
+  margin-right: -4rpx;
+  margin-top: -3rpx;
+  border-radius: 50%;
+  border: 2rpx solid #999;
+  background: transparent;
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before{
+  border-radius: 50%;
+  width: 20rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  text-align: center;
+  font-size:20rpx;
+  color:#fff;
+  background: #f00;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}
+
+radio .wx-radio-input.wx-radio-input-checked {
+  border: none;
+  background: red;
+}

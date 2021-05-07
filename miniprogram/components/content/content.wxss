@@ -1,9 +1,13 @@
 .content-wrapper {
-	margin: 20rpx 30rpx 0;
+	margin: 20rpx 20rpx 0;
 	padding: 20rpx 0 20rpx 20rpx;
+    width: 710rpx;
+    height: 320rpx;
 	background-color: #333399;
 	border-radius: 10rpx;
     color: #efefef;
+    width: 710rpx;
+    box-sizing: border-box;
 }
 
 .content-wrapper .title {

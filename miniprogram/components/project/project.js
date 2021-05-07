@@ -1,6 +1,6 @@
 /**
  * 项目块
- * @author Philip
+ * @author Chenxiangyu
  */
 
 Component({

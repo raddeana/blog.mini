@@ -7,20 +7,22 @@ import { auth, checkAuth } from './apis.js'
 
 /**
  * 用户是否已授权
- * @return none
+ * @return {none}
  */
 export function checkSession () {
     wx.checkSession({
         /**
          * 请求成功
-         * @Hanlder
+         * @return {void}
          */
         success: function (res) {
-            loginRemote(res)
+            wx.switchTab({
+                url: '/pages/home/home'
+            });
         },
         /**
          * 请求失败
-         * @Hanlder
+         * @return {void}
          */
         fail: function () {
             login()
@@ -30,20 +32,21 @@ export function checkSession () {
 
 /**
  * 用户授权
- * @return none
+ * @return {none}
  */
 export function login () {
     wx.login({
         /**
          * 请求成功
-         * @Hanlder
+         * @return {void}
          */
         success: function (res) {
             loginRemote(res)
         },
+
         /**
          * 请求失败
-         * @Hanlder
+         * @return {void}
          */
         fail: function () {
             wx.redirectTo({
@@ -54,17 +57,13 @@ export function login () {
 }
 
 export function loginRemote (res) {
-    wx.switchTab({
-        url: '/pages/home/home'
+    post(auth, { token: res.code }).then(function () {
+        wx.redirectTo({
+            url: '/pages/home/home'
+        });
+    }, function () {
+        wx.redirectTo({
+            url: '/pages/login/login'
+        });
     })
-
-    // post(auth, { token: res.code }).then(function () {
-    //     wx.redirectTo({
-    //         url: '/pages/home/home'
-    //     })
-    // }, function () {
-    //     wx.redirectTo({
-    //         url: '/pages/login/login'
-    //     })
-    // })
 }

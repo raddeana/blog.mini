@@ -1,7 +1,4 @@
 {
     "navigationStyle": "custom",
-    "usingComponents": {
-        "loading": "/miniprogram_npm/weui-miniprogram/loading/loading"
-    },
     "initialRenderingCache": "static"
 }

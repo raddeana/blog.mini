@@ -1,30 +1,70 @@
 {
+  "entryPagePath": "pages/home/home",
   "pages": [
     "pages/authorize-loading/authorize-loading",
     "pages/home/home",
     "pages/user/user",
     "pages/contents-list/contents-list",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/register/register"
   ],
+  "subpackages": [{
+    "root": "player/",
+    "name": "player",
+    "pages": [
+      "pages/musics/musics",
+      "pages/music/music"
+    ]
+  }, {
+    "root": "hackbox/",
+    "name": "hackbox",
+    "pages": [
+      "pages/tools/tools",
+      "pages/scan/scan",
+      "pages/cryptanalysis/cryptanalysis"
+    ]
+  }, {
+    "root": "map/",
+    "name": "map",
+    "pages": [
+      "pages/index/index",
+      "pages/anchoring/anchoring"
+    ]
+  }],
+  "preloadRule": {
+    "pages/home/home": {
+      "network": "all",
+      "packages": ["hackbox", "player"]
+    }
+  },
   "window": {
-    "backgroundColor": "#bf778a",
-    "navigationBarTitleText": "博客Raddeana",
-    "navigationBarBackgroundColor": "#a04056",
+    "navigationBarBackgroundColor": "#155c90",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "custom": true,
     "list": [{
       "pagePath": "pages/home/home",
-      "iconPath": "images/home.jpg",
-      "selectedIconPath": "images/home.jpg",
       "text": "首页"
     }, {
       "pagePath": "pages/user/user",
-      "iconPath": "images/user.jpg",
-      "selectedIconPath": "images/user.jpg",
       "text": "我的"
     }]
   },
   "resizable": true,
-  "pageOrientation": "auto"
+  "pageOrientation": "auto",
+  "usingComponents": {
+    "custom-navigation-bar": "/components/custom-navigation-bar/custom-navigation-bar"
+  },
+  "style": "v2",
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "singlePage": {
+    "navigationBarFit": "float"
+  },
+  "workers": "workers",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
 }

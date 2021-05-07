@@ -2,71 +2,58 @@
  * 内容列表
  * @author Philip
  */
-function createData () {
-	const arr = []
+import { createData } from '../../utils/createData';
 
-	for (let i = 0, len = 10; i < len; i ++) {
-		const obj = {
-			title: (Math.random() * 1000).toFixed(2)
-		}
-
-		if (obj.title <= 300) {
-			obj.type = 'project'
-		} else if (obj.title <= 600) {
-			obj.type = 'content'
-		} else {
-			obj.type = 'schedule'
-		}
-
-		if (obj.type === 'project') {
-			obj.items = [{
-				state: (Math.random() * 1000).toFixed(2),
-				title: (Math.random() * 1000).toFixed(2),
-				value: 1
-			}, {
-				state: (Math.random() * 1000).toFixed(2),
-				title: (Math.random() * 1000).toFixed(2),
-				value: 2
-			}, {
-				state: (Math.random() * 1000).toFixed(2),
-				title: (Math.random() * 1000).toFixed(2),
-				value: 3
-			}]
-		} else if (obj.type === 'schedule') {
-			obj.items = [{
-				state: (Math.random() * 1000).toFixed(2),
-				timestamp: 1585051677983,
-				title: (Math.random() * 1000).toFixed(2)
-			}, {
-				state: (Math.random() * 1000).toFixed(2),
-				timestamp: 1585051677983,
-				title: (Math.random() * 1000).toFixed(2)
-			}, {
-				state: 'success',
-				timestamp: 1585051677983,
-				title: (Math.random() * 1000).toFixed(2)
-			}]
-		} else {
-			obj.content = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-		}
-
-		arr.push(obj)
-	}
-
-	return arr
-}
+const createRecycleContext = require('miniprogram-recycle-view');
+let recycleContext = null;
 
 Page({
 	data: {
-		list: createData()
+        finished: false,
+        loading: false,
+		recycleList: [],
+        navigationBarOptions: {
+            bgTextStyle: 'dark',
+            scrollTop: '200rpx',
+            bgColor: '#ff0000',
+            bgColorTop: '#00ff00',
+            bgColorBottom: '#0000ff',
+            pageTitle: '内容中心',
+            frontColor: '#333',
+            backgroundColor: '#efefef',
+            rootFontSize: '40rpx'
+        }
 	},
+    onLoadData () {
+        if (!this.loading) {
+            this.loading = true;
 
-	onReachBottom () {
-		const data = createData()
-		const currData = this.data.list
+            setTimeout(() => {
+                let data = createData();
+                console.log(` -------------- >>>> ${data.length}`);
 
-		this.setData({
-			list: data.concat(currData)
-		})
-	}
+                recycleContext.append(data);
+                this.loading = false;
+            }, 3000);
+        }
+    },
+
+    /**
+     * @Hook
+     */
+    onReady () {
+        recycleContext = createRecycleContext({
+            id: 'recycle-id',
+            dataKey: 'recycleList',
+            page: this,
+            itemSize: function() {
+                return {
+                    height: recycleContext.transformRpx(340),
+                    width: recycleContext.transformRpx(730)
+                };
+            }
+        });
+
+        this.onLoadData();
+    }
 })

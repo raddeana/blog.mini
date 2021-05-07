@@ -1,6 +1,6 @@
 /**
  * 时间表块
- * @author Philip
+ * @author Chenxiangyu
  */
 
 Component({

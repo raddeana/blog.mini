@@ -1,0 +1,17 @@
+<view>
+    <van-cell-group>
+      <van-cell title="姓名" value="陈翔宇" />
+      <van-cell title="昵称" value="Philip" />
+      <van-cell title="生日" value="03/21" />
+    </van-cell-group>
+    <van-cell-group custom-class="contacts">
+      <van-cell title="邮箱" value="wowcxy2008@126.com" />
+      <van-cell title="手机号码" value="15924127395" />
+      <van-cell title="自我介绍" value="乐观积极向上" />
+    </van-cell-group>
+    <van-button 
+        class="logout-button"
+        type="warning"
+        bindtap="handleLogout"
+    >登出</van-button>
+</view>

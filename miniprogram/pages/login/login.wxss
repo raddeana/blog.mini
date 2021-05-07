@@ -4,6 +4,7 @@
     margin: 120rpx auto 0;
     border: 1px solid #eee;
     padding: 30rpx;
+    width: calc(100% - 60rpx);
 }
 
 .login-panel .van-panel:after {
@@ -15,7 +16,7 @@
 }
 
 .login-button .van-button {
-    margin: 60rpx auto 0;
+    margin: 60rpx 30rpx 0;
     display: flex;
     font-size: 28rpx;
 }

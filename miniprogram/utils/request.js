@@ -18,7 +18,7 @@ const defaultOptions = {
  * @parma {string} 请求的url
  * @parma {object} 请求数据
  * @parma {object} 请求配置
- * @return none
+ * @return {void}
  */
 export function request (url, data, options) {
     return new Promise(function (resolve, reject) {
@@ -43,7 +43,7 @@ export function request (url, data, options) {
  * @parma {string} 请求的url
  * @parma {object} 请求数据
  * @parma {object} 请求配置
- * @return none
+ * @return {void}
  */
 export function post (url, data, options) {
     return request(url, data, options)
@@ -54,7 +54,7 @@ export function post (url, data, options) {
  * @parma {string} 请求的url
  * @parma {object} 请求参数
  * @parma {object} 请求配置
- * @return none
+ * @return {void}
  */
 export function get (url, params, options) {
     return request(url, params, options)
